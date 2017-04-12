@@ -33,6 +33,9 @@ class ViewManager {
 		// loop through the element value except the first one
 		let num1 = 1;
 		for(let j = 0; j < element.length; j++){
+			if(!element[j].value){
+				continue;
+			}
 			num1 *= element[j].value;
 		}
 		let num2 = 1;
