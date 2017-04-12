@@ -32,19 +32,20 @@ class ViewManager {
 
 		// loop through the element value except the first one
 		let num1 = 1;
-		for(let j = 0; j < element.length; j++){
+		for(let j = 1; j < element.length; j++){
 			if(!element[j].value){
 				continue;
 			}
 			num1 *= element[j].value;
 		}
-		let num2 = 1;
+		let num2 = document.getElementById('input-num1').value;
+		num2 = parseInt(num2, 10);
 		// add the numbers
 		const sum = multi(num1, num2);
 		// output
 		this.renderSum(sum);
 	}
-
+	
 	renderSum(sum) {
 		document.querySelector('.sum').textContent = sum;
 	}
