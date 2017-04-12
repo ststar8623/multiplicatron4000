@@ -16,7 +16,6 @@ class ViewManager {
 
 		let div = document.createElement('div');
 		let input = document.createElement('input');
-		input.id = 'input-num';
 		input.type = 'text';
 		input.autocomplete = 'off';
 		div.append(input);
@@ -33,13 +32,10 @@ class ViewManager {
 
 		// loop through the element value except the first one
 		let num1 = 1;
-		for(let j = 1; j < element.length; j++){
+		for(let j = 0; j < element.length; j++){
 			num1 *= element[j].value;
 		}
-		// grab the first input value
-		let num2 = document.getElementById('input-num1').value;
-		// cast the strings to ints
-		num2 = parseInt(num2, 10);
+		let num2 = 1;
 		// add the numbers
 		const sum = multi(num1, num2);
 		// output
