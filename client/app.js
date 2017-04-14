@@ -2,7 +2,7 @@ const multi = require('./multi.js');
 
 class ViewManager {
 
-	connectEvenHandlers() {
+	connectEventHandlers() {
 		// wire up event handler for form submit
 		document.getElementById('form-submit')
 			.addEventListener('submit', this.onSubmit.bind(this));
@@ -52,4 +52,4 @@ class ViewManager {
 }
 
 const viewManager = new ViewManager();
-viewManager.connectEvenHandlers();
+viewManager.connectEventHandlers();
